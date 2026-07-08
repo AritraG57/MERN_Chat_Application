@@ -92,8 +92,13 @@ const logout = (req, res) => {
     }
 };
 
+const updateProfile = async (req,res) => {
+
+};
+
 export const authController = {
     login,
     signup,
     logout,
+    updateProfile,
 };
