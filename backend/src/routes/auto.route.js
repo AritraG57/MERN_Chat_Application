@@ -10,4 +10,6 @@ router.post("/logout",authController.logout);
 
 router.put("/update-profile",authMiddleware.protectRoute,authController.updateProfile);
 
+router.get("/check",authMiddleware.protectRoute,authController.checkAuth);
+
 export default router;
