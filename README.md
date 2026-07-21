@@ -6,7 +6,7 @@ A modern **full-stack real-time chat application** built using the **MERN Stack*
 
 ## 🚀 Live Demo
 
-🔗 **Live Application:** `https://mern-chat-application-efru.onrender.com/`
+🔗 **Live Demo:** [Chatty](https://mern-chat-application-efru.onrender.com/)
 
 ---
 
