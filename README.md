@@ -29,10 +29,16 @@ A modern **full-stack real-time chat application** built using the **MERN Stack*
 ### 👥 Groups
 
 * Create new groups
+* Real-time group messaging
 * Add members to groups
 * Remove members from groups
+* Change group name
+* Update group profile picture
+* Promote members to admins
+* Remove admin privileges
 * Role-based group administration
-* Group conversations in real time
+* Leave groups
+* Persistent group conversations
 
 ### 🤝 Friend Management
 
@@ -60,50 +66,73 @@ A modern **full-stack real-time chat application** built using the **MERN Stack*
 
 ---
 
-# 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-## Frontend
+### 🎨 Frontend
 
-* React
-* Zustand
-* Tailwind CSS
-* DaisyUI
-* Axios
-* React Router DOM
-* Socket.IO Client
+- React
+- Vite
+- React Router DOM
+- Zustand
+- Tailwind CSS
+- DaisyUI
+- Axios
+- Socket.IO Client
+- React Hot Toast
+- Lucide React
 
-## Backend
+### ⚙️ Backend
 
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
-* Socket.IO
-* JWT Authentication
-* Cookie Parser
-* Cloudinary
-
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Socket.IO
+- JSON Web Token (JWT)
+- bcryptjs
+- Cloudinary
+- Cookie Parser
+- CORS
+- dotenv
 ---
 
 # 📂 Project Structure
 
 ```
 Chatty/
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── lib/
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   └── index.js
+│   ├── .env
+│   ├── .gitignore
+│   ├── package.json
+│   └── package-lock.json
 │
 ├── frontend/
-│   ├── src/
 │   ├── public/
-│   └── package.json
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── constants/
+│   │   ├── lib/
+│   │   ├── pages/
+│   │   ├── store/
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   └── vite.config.js
 │
-├── backend/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── lib/
-│   ├── server.js
-│   └── package.json
-│
+├── package.json
 └── README.md
 ```
 
@@ -189,36 +218,72 @@ http://localhost:5173
 
 # 📌 API Highlights
 
-### Authentication
+### 🔐 Authentication
 
-* User Signup
-* User Login
-* User Logout
-* Authentication Check
-* Update Profile
+- User Signup
+- User Login
+- User Logout
+- Authentication Check
+- Update User Profile
+- JWT-based Authentication
+- Secure Session Management
 
-### Chat
+### 👤 Users
 
-* Send Messages
-* Fetch Messages
-* Real-Time Messaging
-* Image Sharing
+- Explore Users
+- Search Users
 
-### Groups
+### 🤝 Friends
 
-* Create Group
-* Add Members
-* Remove Members
-* Group Messaging
+- Send Friend Request
+- Accept Friend Request
+- Reject Friend Request
+- View Friend Requests
+- View Sent Requests
+- Get Friends List
+- Remove Friend
 
-### Friends
+### 💬 Direct Messaging
 
-* Add Friend
-* Remove Friend
-* Friend Requests
+- Send Text Messages
+- Share Images via Cloudinary
+- Fetch Chat History
+- Real-Time Messaging with Socket.IO
 
----
+### 👥 Groups
 
+- Create Group
+- Get User Groups
+- Get Group Details
+- Rename Group
+- Update Group Picture
+- Add Members
+- Remove Members
+- Promote Members to Admin
+- Remove Admin Privileges
+- Get Available Members
+- Leave Group
+- Delete Group
+
+### 📨 Group Messaging
+
+- Send Group Messages
+- Fetch Group Chat History
+- Real-Time Group Messaging
+
+### ⚡ Real-Time Events
+
+- Online/Offline User Presence
+- Instant Message Delivery
+- Friend Request Notifications
+- Friend Acceptance/Rejection Notifications
+- Group Creation Notifications
+- Group Member Updates
+- Group Admin Updates
+- Group Rename Notifications
+- Group Picture Update Notifications
+- Profile Update Notifications
+  
 # 🔒 Security
 
 * JWT Authentication
