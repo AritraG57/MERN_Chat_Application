@@ -4,7 +4,11 @@ import { authMiddleware } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 
-router.get("/users",authMiddleware.protectRoute,messageController.getUserForSidebar);
+// Group chat
+router.get("/group/:groupId", authMiddleware.protectRoute, messageController.getGroupMessages);
+router.post("/group/send/:groupId", authMiddleware.protectRoute, messageController.sendGroupMessage); 
+
+// One-to-one chat
 router.get("/:id",authMiddleware.protectRoute,messageController.getMessages);
 router.post("/send/:id",authMiddleware.protectRoute,messageController.sendMessage);
 

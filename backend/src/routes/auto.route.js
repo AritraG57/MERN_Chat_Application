@@ -7,7 +7,7 @@ const router = express.Router();
 router.post("/signup",authController.signup);
 router.post("/login" ,authController.login);
 router.post("/logout",authController.logout);
-
+//Shift update profile to userRoute
 router.put("/update-profile",authMiddleware.protectRoute,authController.updateProfile);
 
 router.get("/check",authMiddleware.protectRoute,authController.checkAuth);

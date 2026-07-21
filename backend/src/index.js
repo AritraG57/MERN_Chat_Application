@@ -7,6 +7,9 @@ import messageRoutes from "./routes/message.route.js";
 import cors from "cors";
 import { app,server } from "./lib/socket.js";
 import path from "path";
+import friendRoutes from "./routes/friend.route.js";
+import groupRoutes from "./routes/group.route.js";
+import userRoutes from "./routes/user.route.js";
 
 dotenv.config();
 
@@ -24,6 +27,9 @@ app.use(cors({
 
 app.use("/api/auth",authRoutes);
 app.use("/api/messages",messageRoutes);
+app.use("/api/friends",friendRoutes);
+app.use("/api/group",groupRoutes);
+app.use("/api/user",userRoutes);
 
 if(process.env.NODE_ENV==="production") {
     app.use(express.static(path.join(__dirname, "../frontend/dist")));
